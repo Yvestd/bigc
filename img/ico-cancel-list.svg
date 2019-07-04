@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ico-cancel-list" transform="translate(-320 -368)">
+    <rect id="Rectangle_33" data-name="Rectangle 33" width="20" height="20" transform="translate(320 368)" fill="none"/>
+    <g id="Group_431" data-name="Group 431">
+      <g id="Group_429" data-name="Group 429" transform="translate(-2.201)">
+        <path id="Subtraction_36" data-name="Subtraction 36" d="M-5143-10418h-.167l-1.334-2-1.333,2-1.333-2-1.333,2-1.336-2-1.33,2-1.335-2-1.334,2H-5154v-16h11v16Z" transform="translate(5477.999 10804)" fill="#fff" stroke="rgba(0,0,0,0.5)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <g id="Group_428" data-name="Group 428" transform="translate(-5154 -10434)">
+          <line id="Line_38" data-name="Line 38" x2="4" transform="translate(5480.5 10807)" fill="none" stroke="rgba(0,0,0,0.5)" stroke-linecap="round" stroke-width="1"/>
+          <line id="Line_39" data-name="Line 39" x2="4" transform="translate(5480.5 10809.5)" fill="none" stroke="rgba(0,0,0,0.5)" stroke-linecap="round" stroke-width="1"/>
+          <line id="Line_40" data-name="Line 40" x2="4" transform="translate(5480.5 10812)" fill="none" stroke="rgba(0,0,0,0.5)" stroke-linecap="round" stroke-width="1"/>
+          <line id="Line_41" data-name="Line 41" x2="2" transform="translate(5485 10815)" fill="none" stroke="rgba(0,0,0,0.5)" stroke-linecap="round" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="Ellipse_597" data-name="Ellipse 597" transform="translate(330.049 378)" fill="#fff" stroke="#7f7f7f" stroke-width="1">
+        <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+        <circle cx="4.5" cy="4.5" r="4" fill="none"/>
+      </g>
+      <g id="Group_430" data-name="Group 430" transform="translate(-0.701 0.25)">
+        <line id="Line_42" data-name="Line 42" x2="2.5" y2="2.5" transform="translate(334 381)" fill="none" stroke="#7f7f7f" stroke-linecap="round" stroke-width="1"/>
+        <line id="Line_43" data-name="Line 43" x1="2.5" y2="2.5" transform="translate(334 381)" fill="none" stroke="#7f7f7f" stroke-linecap="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

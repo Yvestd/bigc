@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <title>Big C</title>
+  </head>
+  
+  <body class="cbp-spmenu-push">
+    <!-- MENU -->
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+        <div class="menu-title">
+            <div class="user-image"><img src="img/ico-customer.svg"></div>
+            <div class="user-number">
+                <p><span class="small">สมาชิกหมายเลข</span>2485 9603 4728 9446</p>
+            </div>
+            <!-- FOR GUEST -->
+            <!-- <div class="user-number">
+                <p>ผู้ใช้งานทั่วไป</p>
+            </div> -->
+        </div>
+        <div class="language-menu">
+            <p>ภาษาที่ใช้งาน</p>
+            <div class="custom-control custom-switch float-right">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" data-off-text="False" data-on-text="True">
+              <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+        </div>
+        <a href="#">ข้อตกลงและเงื่อนไขการใช้งาน</a>
+        <a href="#">การเข้าถึงข้อมูลการใช้งาน</a>
+        <a href="#">ออกจากระบบ</a>
+    </nav>
+    <!-- END MENU -->
+    <div class="grey-background">
+        <div class="header cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="logo"><img src="img/logo-bigc.svg"></div>
+                        <button class="menu" id="showRightPush"><img src="img/ico-menu.svg"></button>
+                        <div class="custom-name"><p><span class="small">หมายเลขสมาชิก</span>2485 9603 4728 9446</p></div>
+                        <!-- FOR GUEST -->
+                        <!-- <div class="custom-name"><p><span class="small">หมายเลขสมาชิก</span>ผู้ใช้งานทั่วไป</p></div> -->
+                    </div>
+                    <div class="col-12 block-detail">
+                        <div class="detail">
+                            <div class="num-detail">
+                                <p class="small">เลขที่การทำรายการ</p>
+                                <p>001908153256</p>
+                            </div>
+                        </div>
+                        <div class="detail float-right">
+                            <div class="date-detail">
+                                <p class="small">วันที่และเวลา</p>
+                                <p>28 ต.ค. 62 <span>14.05 น.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content cart">
+            <div class="container">
+                <div class="btn-scan"><a href="#">สแกนสินค้า</a></div>
+                <!-- NO LIST PRODUCT -->
+                <!-- <div class="no-list text-center">
+                    <h5>ยังไม่มีสินค้าในรถเข็น</h5>
+                    <img src="../img/ico-empty-cart.svg">
+                </div> -->
+
+                <!-- LIST PRODUCT -->
+                <div class="have-list">
+                    <h5>สินค้าในรถเข็น</h5>
+                    <div class="list-detail">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><p>ชื่อสินค้า</p></th>
+                                    <th><p>ราคา</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="prod-name">
+                                        <p>คอลลีน ดินสอสีไม้ 12 สี รุ่น 775</p>
+                                        <p class="small">รหัสสินค้า: 8851316009056</p>
+                                    </td>
+                                    <td class="prod-price">
+                                        <p><span>฿</span>126.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="prod-amount">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                    <img src="img/ico-minus-click.svg">
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                                    <img src="img/ico-plus-click.svg">
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="prod-name">
+                                        <p>ตราหมี นมผงปรุงแต่ง แอดวานซ์โพรเท็กช์ชันแอลโพรเท็กซ์ทัส บิฟิดัสบีแอล...</p>
+                                        <p class="small">รหัสสินค้า: 8850124095213</p>
+                                    </td>
+                                    <td class="prod-price">
+                                        <p><span>฿</span>620.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="prod-amount">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                    <img src="img/ico-minus-click.svg">
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                                    <img src="img/ico-plus-click.svg">
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="prod-name">
+                                        <p>เบสิโค ชุดเครื่องครัว 8 ชิ้น สีโรสโกลด์</p>
+                                        <p class="small">รหัสสินค้า: 8859038110845</p>
+                                    </td>
+                                    <td class="prod-price">
+                                        <p><span>฿</span>1,599.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="prod-amount">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                    <img src="img/ico-minus-click.svg">
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                                    <img src="img/ico-plus-click.svg">
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="prod-name">
+                                        <p>ข้าวมาบุญครอง ข้าวหอมปทุม เกรด 100% คัดพิเศษ 5 กิโลกรัม</p>
+                                        <p class="small">รหัสสินค้า: 8859038110845</p>
+                                    </td>
+                                    <td class="prod-price">
+                                        <p><span>฿</span>169.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="prod-amount">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                    <img src="img/ico-minus-click.svg">
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                                    <img src="img/ico-plus-click.svg">
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END LIST PRODUCT -->
+            </div>
+        </div>
+        <div class="footer cart">
+            <div class="footer-detail">
+                <p>ยอดชำระรวม <span>(5 ชิ้น)</span></p>
+                <h5><span>฿</span>2,869.00</h5>
+                <p><a href="#">ยกเลิกการทำรายการ</a></p>
+            </div>
+            <div class="footer-btn">
+                <a href="#" data-toggle="modal" data-target="#modalNoLocation">ชำระเงิน</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modalRemove" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">ลบสินค้า</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>ท่านต้องการที่จะลบสินค้านี้ออกจากรถเข็นใช่หรือไม่</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary remove">ลบ</button>
+            <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">ยกเลิก</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalNoLocation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">ไม่สามารถระบุตำแหน่งได้</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>กรุณาเปิดใช้บริการระบุตำแหน่งที่ตั้งเพื่อให้ Scan and Pay สามารถเข้าถึงตำแหน่งช้อปปิ้งปัจจุบันของท่านได้</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-green">เปิดใช้งาน</button>
+            <button type="button" class="btn btn-secondary btn-link" data-dismiss="modal">ไม่เปิดใช้งาน</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalTimeOut" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">ขออภัย</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>คุณใช้เวลาทำรายการเกินกว่าที่กำหนด กรุณาทำรายการใหม่อีกครั้ง</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-green">ตกลง</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalAllowAccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">อนุญาตการเข้าถึงกล้อง</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>กรุณาอนุญาตการเข้าถึงกล้อง เพื่อให้คุณสามารถสแกนโค้ดสินค้าระหว่างใช้งาน Scan and Pay ได้</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-green">อนุญาต</button>
+            <button type="button" class="btn btn-secondary btn-link" data-dismiss="modal">ปฏิเสธ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL -->
+
+    <script type="text/javascript">
+        // Menu
+        var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+            showRightPush = document.getElementById( 'showRightPush' ),
+            body = document.body;
+
+        showRightPush.onclick = function() {
+            classie.toggle( this, 'active' );
+            classie.toggle( body, 'cbp-spmenu-push-toleft' );
+            classie.toggle( menuRight, 'cbp-spmenu-open' );
+            disableOther( 'showRightPush' );
+        };
+
+        function disableOther( button ) {
+            if( button !== 'showRightPush' ) {
+                classie.toggle( showRightPush, 'disabled' );
+            }
+        }
+    </script>
+  </body>
+</html>
