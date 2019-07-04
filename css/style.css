@@ -256,6 +256,12 @@ body {
     -webkit-text-fill-color: #fff;
     margin-bottom: 0;
 }
+/* Bug on safari */
+.cbp-spmenu-vertical .menu-title .user-number p a {
+    border-bottom: none;
+    padding: 0;
+}
+/* End Bug on safari */
 .cbp-spmenu a {
     display: block;
     font-family: 'pslkittithadabold';
