@@ -78,10 +78,23 @@ body {
 }
 .green-background {
     background-image: linear-gradient(to bottom right, #AECE34, #C2D32B, #AECE34);
-    height: -webkit-fill-available;
+    height: 100vh;
 }
 .grey-background {
     background-color: #EBEBEB;
+}
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(227,227,227,.5); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E3E3E3; 
 }
 
 /* Terms */
@@ -127,6 +140,7 @@ body {
     height: calc(27px - 2px);
     border-radius: 25px;
     background-color: #fff;
+    box-shadow: 0px 3px 1px rgba(0,0,0,.06);
     z-index: 99;
 }
 .custom-switch .custom-control-input:checked~.custom-control-label::before {
@@ -149,9 +163,9 @@ body {
 .terms .block:after {
     display: block;
     content: '';
-    width: calc(100% - 10px);
+    width: calc(100% - 4px);
     height: 60px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 95%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.7) 22%, rgba(255,255,255,1) 66%);
     position: absolute;
     bottom: 0;
 }
@@ -241,6 +255,7 @@ body {
 .cbp-spmenu .menu-title .user-number p span.small {
     font-size: 20px;
     color: rgba(255,255,255,.53);
+    -webkit-text-fill-color: rgba(255,255,255,.53);
     display: block;
 }
 .cbp-spmenu .menu-title .user-number p {
@@ -248,6 +263,7 @@ body {
     font-size: 30px;
     line-height: 1;
     color: #fff;
+    -webkit-text-fill-color: #fff;
     margin-bottom: 0;
 }
 .cbp-spmenu a {
@@ -352,6 +368,7 @@ body {
     font-family: 'pslkittithadabold';
     font-size: 30px;
     color: rgba(0,0,0,.65);
+    -webkit-text-fill-color: rgba(0,0,0,.65); 
     float: right;
     line-height: 1;
     text-align: right;
@@ -389,9 +406,11 @@ body {
     font-family: 'pslkittithadabold';
     margin: 0;
     font-size: 24px;
+    -webkit-text-fill-color: #000;
 }
 .header.cart .block-detail .detail p.small {
     color: rgba(0,0,0,.50);
+    -webkit-text-fill-color:rgba(0,0,0,.50);
 }
 .shadow-bg {
     background: rgba(255,255,255,.41);
@@ -478,10 +497,13 @@ body {
     padding-top: 6px;
 }
 .content.cart .list-detail table tr .prod-amount .input-group {
-    width: 25%;
+    width: 66px;
 }
 .content.cart .list-detail table tr .prod-amount .input-group button {
-    padding: 0;
+    padding: 2px 0 0 0;
+}
+.content.cart .list-detail table tr .prod-amount .input-group button.btn:disabled {
+    opacity: .4;
 }
 .content.cart .list-detail table tr .prod-amount .input-group .input-number {
     border: none;
@@ -492,10 +514,12 @@ body {
 }
 .content.cart .list-detail table tr p {
     margin-bottom: 0;
+    -webkit-text-fill-color: #000;
 }
 .content.cart .list-detail table tr p.small {
     font-size: 18px!important;
     color: rgba(38,38,38,.6);
+    -webkit-text-fill-color: rgba(38,38,38,.6);
 }
 .content.cart .list-detail table tbody {
     border-bottom: 1px solid rgba(106,106,106,.1);
@@ -604,8 +628,10 @@ body {
     font-family: 'pslkittithadabold';
     font-size: 26px;
     color: #fff;
+    text-shadow: 1px -0.5px rgba(0,0,0,.07);
     padding: 8px 20px;
-    background: rgba(107,153,198,.79);
+    background-image: linear-gradient(to bottom right, #9AC0E6, #6995BF);
+    border: 1px solid rgba(255,255,255,.15);
     border-radius: 31px;
 }
 .content.payment .block-detail .detail02 {
@@ -620,9 +646,11 @@ body {
     font-family: 'pslkittithadabold';
     font-size: 26px;
     color: #fff;
+    text-shadow: 1px -0.5px rgba(0,0,0,.07);
     padding: 8px 20px;
-    background: rgba(230,169,31,.79);
+    background-image: linear-gradient(to bottom right, #FFD26A, #EAB339);
     border-radius: 31px;
+    border: 1px solid rgba(255,255,255,.15);
 }
 
 /* Modal */
@@ -719,6 +747,9 @@ body {
     font-size: 26px;
     display: inline-block;
 }
+.allow-access.content p {
+    line-height: 1;
+}
 .allow-access.content {
     margin-top: 20px;
 }
@@ -795,6 +826,10 @@ body {
 }
 
 @media (min-width:768px) {
+    .green-background {
+        height: 120vh;
+    }
+
     /* Cart */
     .header.cart {
         background-position: center bottom;
@@ -814,7 +849,7 @@ body {
     }
 
     /* Map */
-    .map.content .image-map img {
-        width: 70%;
+    .map.content h3 br {
+        display: none;
     }
 }
