@@ -83,19 +83,6 @@ body {
 .grey-background {
     background-color: #EBEBEB;
 }
-/* Scrollbar */
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgba(227,227,227,.5); 
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #E3E3E3; 
-}
 
 /* Terms */
 .header.terms {
@@ -193,8 +180,11 @@ body {
     line-height: 1.2;
 }
 .custom-control-input:checked~.custom-control-label::before {
-    border-color: rgba(206,242,64,.26);
+    border: 1px solid rgba(206,242,64,.26);
     background-color: #A8C631;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url(../img/ico-checked.svg);
 }
 .block .custom-control-label {
     font-family: 'psl_kanda_probold';
@@ -218,14 +208,14 @@ body {
 }
 .btn-default input {
     background-image: linear-gradient(to bottom , #A8C631, #9BB530);
-    border: 1px solid rgba(206,242,64,.26);
+    border: 1px solid #ACCB34;
     border-radius: 25px;
     width: 110px;
     height: 40px;
     font-family: 'pslkittithadabold';
     font-size: 26px;
     box-shadow: 0px 3px 3px rgba(0,0,0,.1);
-    margin: 20px 0 40px 0;
+    margin: 20px 0 60px 0;
     color: #fff;
     text-shadow: 1px -0.5px rgba(0,0,0,.07)
 }
@@ -439,7 +429,7 @@ body {
     top: -18px;
     right: 15px;
     background-image: linear-gradient(to bottom , #FED02B, #FEC52B);
-    border: 1px solid rgba(252,231,158,.37);
+    border: 1px solid #FED455;
     border-radius: 25px;
     box-shadow: 0px 3px 3px rgba(0,0,0,.1);
     width: 165px;
@@ -510,6 +500,7 @@ body {
     font-family: 'pslkittithadabold';
     font-size: 22px;
     padding: 8px;
+    height: 35px;
     text-align: center;
 }
 .content.cart .list-detail table tr p {
@@ -570,7 +561,7 @@ body {
     height: 40px;
     border-radius: 25px;
     background-image: linear-gradient(to bottom , #A8C631, #9BB530);
-    border: 1px solid rgba(206,242,64,.26);
+    border: 1px solid #ACCB34;
     box-shadow: 0px 3px 3px rgba(0,0,0,.1);
     display: inline-block;
     vertical-align: top;
@@ -631,7 +622,7 @@ body {
     text-shadow: 1px -0.5px rgba(0,0,0,.07);
     padding: 8px 20px;
     background-image: linear-gradient(to bottom right, #9AC0E6, #6995BF);
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid #B9D6F4;
     border-radius: 31px;
 }
 .content.payment .block-detail .detail02 {
@@ -650,7 +641,7 @@ body {
     padding: 8px 20px;
     background-image: linear-gradient(to bottom right, #FFD26A, #EAB339);
     border-radius: 31px;
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid #F6D996;
 }
 
 /* Modal */
@@ -701,11 +692,11 @@ body {
 }
 .modal-content .modal-footer button.cancel {
     background-image: linear-gradient(to bottom , #DEDEDE, #B7B7B7);
-    border: 1px solid rgba(214,214,214,.26);
+    border: 1px solid #D3D3D3;
 }
 .modal-content .modal-footer button.btn-green {
     background-image: linear-gradient(to bottom , #A8C631, #9BB530);
-    border: 1px solid rgba(206,242,64,.26);
+    border: 1px solid #ACCB34;
 }
 .modal-content .modal-footer button.btn-link {
     border: none;
