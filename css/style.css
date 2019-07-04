@@ -393,6 +393,11 @@ body {
 .header.cart .block-detail .detail p.small {
     color: rgba(0,0,0,.50);
 }
+.shadow-bg {
+    background: rgba(255,255,255,.41);
+    border-radius: 34px;
+    padding-top: 5px;
+}
 .content.cart {
     background-color: #fff;
     /*height: -webkit-fill-available;*/
@@ -400,7 +405,6 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: relative;
-    box-shadow: 0px -5px 0px rgba(255,255,255,.41);
 }
 .content.cart:after {
     display: block;
