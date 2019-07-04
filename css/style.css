@@ -806,7 +806,7 @@ body {
     .header.cart .block-detail .detail {
         width: 38%;
     }
-    .content.cart {
+    .shadow-bg {
         margin-top: 40px;
     }
     .footer.cart {
