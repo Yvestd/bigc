@@ -83,6 +83,10 @@ body {
 .grey-background {
     background-color: #EBEBEB;
 }
+.black-background {
+    background-image: linear-gradient(to bottom, rgba(1,1,1,.6), rgba(15,15,15,.4), rgba(134,134,134,.2), transparent 98%);
+    height: 323px;
+}
 
 /* Terms */
 .header.terms {
@@ -218,6 +222,11 @@ body {
     margin: 20px 0 60px 0;
     color: #fff;
     text-shadow: 1px -0.5px rgba(0,0,0,.07)
+}
+input[type="submit" i]:disabled {
+    background-image: linear-gradient(to bottom , #DEDEDE, #B7B7B7);
+    border: 1px solid #D3D3D3;
+    background-image: none;
 }
 .btn-default input[type="submit" i]:focus {
     outline: none;
@@ -433,7 +442,7 @@ body {
 .content.cart .btn-scan {
     position: absolute;
     top: -18px;
-    right: 15px;
+    right: 4.3%;
     background-image: linear-gradient(to bottom , #FED02B, #FEC52B);
     border: 1px solid #FED455;
     border-radius: 25px;
@@ -756,8 +765,11 @@ body {
 }
 .allow-access.content .custom-switch .custom-control-label::before {
     width: 51px;
-    background-color: #A8C631;
+    background-color: #E3E3E3;
     border: 1px solid rgba(211,211,211,.2);
+}
+.allow-access.content .custom-switch .custom-control-input:checked~.custom-control-label::before {
+    background-color: #A8C631!important;
 }
 .allow-access.content .custom-switch .custom-control-input:checked~.custom-control-label::after {
     transform: translateX(1.25rem);
@@ -796,6 +808,331 @@ body {
     width: 100%;
 }
 
+/* QR Code */
+.qrcode {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.1);
+    position: relative;
+}
+.line {
+    background-image: linear-gradient(to right, #DEDEDE 50%, transparent 0%);
+    background-position: center bottom;
+    background-size: 22px 1px;
+    background-repeat: repeat-x;
+    width: 94%;
+    height: 1px;
+    left: 3%;
+    right: 3%;
+    position: absolute;
+    z-index: 99;
+}
+.qrcode .first-section {
+    background-image: url(../img/img-pattern-bigc.svg);
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 277px;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 97%, 97% 100%, 3% 100%, 0 97%, 0 0);
+}
+.qrcode .first-section img {
+    margin: auto;
+}
+.qrcode .second-section {
+    background-image: url(../img/img-pattern-bigc.svg);
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    text-align: center;
+    clip-path: polygon(3% 0, 97% 0, 100% 8%, 100% 100%, 90% 100%, 10% 100%, 0 100%, 0 8%);
+}
+.qrcode .second-section .left {
+    display: inline-block;
+    padding: 15px;
+    text-align: left;
+}
+.qrcode .second-section .right {
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+    text-align: left;
+}
+.qrcode .second-section .right:before {
+    height: 60px;
+    width: 1px;
+    background: #DEDEDE;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    left: 0;
+}
+.qrcode .second-section .left p, .qrcode .second-section .right p {
+    margin-bottom: 0;
+    font-family: 'pslkittithadabold';
+    font-size: 20px;
+    color: rgba(0,0,0,.6);
+}
+.qrcode .second-section .left h5, .qrcode .second-section .right h5 {
+    margin-bottom: 0;
+    font-family: 'pslkittithadabold';
+    font-size: 24px;
+    line-height: 1;
+    -webkit-text-fill-color: #000;
+}
+.qrcode .second-section .left p.small {
+    font-size: 16px!important;
+}
+.qrcode .second-section .right p.small {
+    font-size: 16px!important;
+    color: #D10019;
+}
+.qrcode .third-section {
+    background-color: #E9E9E9;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-align: center;
+    width: 100%;
+    padding: 6px 0;
+}
+.qrcode .third-section p {
+    margin-bottom: 0;
+    font-family: 'pslkittithadabold';
+    font-size: 18px;
+}
+.btn-yellow {
+    background-image: linear-gradient(to bottom , #FED02B, #FEC52B);
+    border: 1px solid #FED455;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.1);
+    width: 165px;
+    height: 40px;
+    padding: 4px 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.btn-yellow a {
+    font-family: 'pslkittithadabold';
+    font-size: 26px;
+    color: #000;
+    text-shadow: 1px -0.5px rgba(0,0,0,.07);
+    text-decoration: none;
+}
+
+/* Payment Success */
+.payment-success-pg.green-background {
+    height: auto;
+}
+.payment-success-pg .header {
+    position: relative;
+}
+.payment-success-pg .header h3 {
+    font-family: 'pslkittithadabold';
+    margin-bottom: 0;
+}
+.payment-success-pg .header a.click-to-map {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-family: 'pslkittithadabold';
+    font-size: 24px;
+    text-decoration: underline;
+}
+.payment-success {
+    margin-top: 30px;
+    font-family: 'pslkittithadabold';
+    text-align: center;
+}
+.payment-success .left-section {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+}
+.payment-success .left-section img {
+    width: 150px;
+}
+.payment-success .right-section {
+    display: inline-block;
+    padding: 0 15px 0 20px;
+    text-align: left;
+}
+.payment-success .right-section p {
+    font-size: 18px;
+    line-height: 1;
+    color: rgba(0,0,0,.5);
+    margin-bottom: 0;
+}
+.payment-success .right-section h5 {
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 15px;
+    -webkit-text-fill-color: #000;
+}
+h5.text-below-img {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+.payment-success .bill-section p, .payment-success .bill-section h5 {
+    margin-bottom: 0;
+}
+.payment-success .bill-section .bill-title {
+    padding-top: 12px;
+    margin-bottom: 19px;
+    text-align: center;
+}
+.payment-success .bill-section .bill-title p {
+    font-family: 'pslkittithadabold';
+    font-size: 18px;
+    color: rgba(0,0,0,.6);
+}
+.payment-success .bill-section .bill-title h5 {
+    font-family: 'pslkittithadabold';
+    font-size: 22px;
+    line-height: 1;
+    -webkit-text-fill-color: #000;
+}
+.payment-success .bill-section .bill-detail {
+    text-align: left;
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+.payment-success .bill-section .bill-detail:nth-last-child(2) {
+    border-bottom: none;
+}
+.payment-success .bill-section .bill-detail .left {
+    display: inline-block;
+}
+.payment-success .bill-section .bill-detail .right {
+    display: inline-block;
+    float: right;
+    vertical-align: bottom;
+}
+.payment-success .bill-section .bill-detail h5 {
+    font-family: 'pslkittithadabold';
+    font-size: 20px;
+}
+.payment-success .bill-section .bill-detail p {
+    font-family: 'pslkittithadabold';
+    font-size: 18px;
+    color: #D10019;
+}
+.payment-success .bill-section .bill-detail h3 {
+    font-family: 'pslkittithadabold';
+    font-size: 26px;
+    color: #A8C631;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+.payment-success .bill-section .txt-small {
+    font-family: 'pslkittithadabold';
+    font-size: 18px;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+}
+.payment-success-pg .btn-yellow {
+    position: absolute;
+    bottom: -18px;
+    left: 27%;
+    right: 27%;
+    margin: 0 auto;
+}
+
+/* Scan Code */
+.code-scan.header {
+    height: 59px;
+}
+h5.content-title {
+    font-family: 'pslkittithadabold';
+    font-size: 28px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+}
+.code-scan.footer {
+    position: fixed;
+    left: 4%;
+    right: 4%;
+    bottom: 15px;
+    margin: 0 auto;
+}
+.code-scan.footer .footer-menu {
+    background: rgba(76,90,20,.8);
+    border-radius: 6px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+}
+.code-scan.footer .footer-menu a {
+    text-decoration: none;
+}
+.code-scan.footer .footer-menu button {
+    border: none;
+    background: none;
+    color: #fff;
+    font-family: 'pslkittithadabold';
+    font-size: 26px;
+    padding-top: 25px;
+    margin: 0 25px;
+}
+.code-scan.footer .footer-menu button.menu-scan {
+    background-image: url(../img/ico-scan-menu.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    /*background-color: red;
+    -webkit-mask: url(../img/ico-scan-menu.svg) no-repeat center top;
+    mask: url(../img/ico-scan-menu.svg) no-repeat center top;*/
+}
+.code-scan.footer .footer-menu button.menu-keyboard {
+    background-image: url(../img/ico-keyboard-menu.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.code-scan.footer .footer-menu button.menu-scan.active {
+    background-image: url(../img/ico-scan-menu-act.svg);
+    color: #A8C631;
+}
+.code-scan.footer .footer-menu button.menu-keyboard.active {
+    background-image: url(../img/ico-keyboard-menu-act.svg);
+    color: #A8C631;
+}
+
+.code-key.content {
+    text-align: center;
+}
+.code-key.content .content-title {
+    color: #000;
+}
+.code-key.content .content-detail {
+    margin-top: 15px;
+}
+.code-key.content input {
+    width: 220px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    display: block;
+    margin: auto;
+}
+
+
 @media (max-width:320px) {
     /* Menu */
     .cbp-spmenu-vertical {
@@ -819,6 +1156,42 @@ body {
     /* Map */
     .map.green-background {
         height: auto;
+    }
+
+    /* QR Code */
+    .qrcode-pg.green-background {
+        padding-bottom: 40px;
+    }
+    .qrcode {
+        width: 100%;
+    }
+    .second-section .left {
+        padding: 12px;
+    }
+    .second-section .right {
+        padding: 12px;
+    }
+
+    /* Payment Success */
+    .payment-success .left-section {
+        padding-left: 0;
+    }
+    .payment-success .left-section img {
+        width: 135px;
+    }
+    .payment-success .right-section {
+        padding: 0 0 0 15px; 
+    }
+    .payment-success .right-section h5 {
+        margin-bottom: 8px;
+    }
+    h5.text-below-img {
+        margin-top: 15px;
+    }
+
+    /* Code Key */
+    .green-background.mobile-320 {
+        height: 112vh;
     }
 }
 
