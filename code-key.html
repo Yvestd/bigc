@@ -13,27 +13,34 @@
     <title>Big C</title>
   </head>
   
-  <body>
-    <div class="green-background mobile-320">
-        <div class="container">
-            <div class="header payment code-scan">
-                <button class="btn-back" onclick="location.href='cart.html';"><img src="img/ico-back.svg"></button>
-            </div>
-            <div class="content code-key">
-                <h5 class="content-title">พิมพ์หมายเลขที่ระบุบน QR Code หรือ Barcode ของสินค้าเพื่อทำการเพิ่มลงรถเข็น</h5>
-                <div class="content-detail">
-                    <img src="img/img-code-example.png">
-                    <input type="tel" placeholder="พิมพ์หมายเลขจาก Barcode">
-                    <div class="btn-yellow"><a href="#">เพิ่มสินค้า</a></div>
-                </div>
-            </div>
-            <div class="footer code-scan">
-                <div class="footer-menu">
-                    <a href="code-scan.html"><button class="menu-scan">สแกนโค้ด</button></a>
-                    <a href="code-key.html"><button class="menu-keyboard active">แป้นพิมพ์</button></a>
-                </div>
-            </div>
+  <body class="code-key-pg">
+    <div class="green-background terms-menu">
+      <div class="container">
+          <div class="header payment code-scan">
+              <button class="btn-back" onclick="location.href='cart.html';"><img src="img/ico-back.svg"></button>
+          </div>
+      </div>
+    </div>
+    <div class="white-background code-key">
+      <div class="container">
+        <div class="content code-key">
+          <h5 class="content-title">พิมพ์หมายเลขที่ระบุบน Barcode หรือ QR Code ของสินค้าเพื่อทำการเพิ่มลงรถเข็น</h5>
+          <div class="content-detail">
+              <input type="tel" id="id-prod">
+              <div class="btn-yellow"><a href="cart.html">เพิ่มสินค้า</a></div>
+              <div>
+                <p class="small">ระบุรหัสสินค้าดังปรากฎในเส้นประสีแดง</p>
+                <img src="img/ico-barcode-ex.svg">
+              </div>
+          </div>
         </div>
+        <div class="footer code-scan">
+          <div class="footer-menu">
+              <a href="code-scan.html"><button class="menu-scan">สแกนโค้ด</button></a>
+              <a href="code-key.html"><button class="menu-keyboard active">ระบุรหัสสินค้า</button></a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- MODAL -->
@@ -47,7 +54,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>สแกนข้อมูล QR Code หรือ Barcode ไม่สำเร็จกรุณาตรวจสอบและสแกนใหม่อีกครั้ง</p>
+            <p>สแกนข้อมูล Barcode หรือ QR Code ไม่สำเร็จกรุณาตรวจสอบและสแกนใหม่อีกครั้ง</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-green">ตกลง</button>
@@ -55,5 +62,14 @@
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      $("#id-prod").focus(function () {
+          $(".code-scan.footer").fadeOut()
+      });
+      $("#id-prod").blur(function () {
+          $(".code-scan.footer").fadeIn()
+      });
+    </script>
   </body>
 </html>

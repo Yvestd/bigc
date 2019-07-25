@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/classie.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <title>Big C</title>
   </head>
   
   <body class="cbp-spmenu-push">
+    <div class="bg-overlay" onclick="overlayToggle()"></div>
     <!-- MENU -->
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
         <div class="menu-title">
@@ -29,13 +29,15 @@
         <div class="language-menu">
             <p>ภาษาที่ใช้งาน</p>
             <div class="custom-control custom-switch float-right">
-              <input type="checkbox" class="custom-control-input" id="customSwitch1" data-off-text="False" data-on-text="True">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
               <label class="custom-control-label" for="customSwitch1"></label>
             </div>
         </div>
-        <a href="terms-from-menu.html">ข้อตกลงและเงื่อนไขการใช้งาน</a>
-        <a href="allow-access.html">การเข้าถึงข้อมูลการใช้งาน</a>
-        <a href="#">ออกจากระบบ</a>
+        <a href="terms-from-menu.html" class="click-to">ข้อตกลงและเงื่อนไขการใช้งาน</a>
+        <a href="allow-access.html" class="click-to">การเข้าถึงข้อมูลการใช้งาน</a>
+        <div class="contact-tel"><p>ติดต่อ Call Center <a href="tel:1756">1756</a></p><p class="time-to-open">เปิดให้บริการ 8.00 - 22.00 น.</p></div>
+        <div class="versions"><p>เวอร์ชัน <span>1.0.0</span></p></div>
+        <a href="#" class="log_out">ออกจากระบบ</a>
     </nav>
     <!-- END MENU -->
     <div class="grey-background">
@@ -44,24 +46,10 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="logo"><img src="img/logo-bigc.svg"></div>
-                        <button class="menu" id="showRightPush"><img src="img/ico-menu.svg"></button>
+                        <button class="menu" id="showRightPush" onclick="overlayToggle()"><img class="menu-img" src="img/ico-menu.svg"></button>
                         <div class="custom-name"><p><span class="small">หมายเลขสมาชิก</span>2485 9603 4728 9446</p></div>
                         <!-- FOR GUEST -->
                         <!-- <div class="custom-name"><p><span class="small">หมายเลขสมาชิก</span>ผู้ใช้งานทั่วไป</p></div> -->
-                    </div>
-                    <div class="col-12 block-detail">
-                        <div class="detail">
-                            <div class="num-detail">
-                                <p class="small">เลขที่การทำรายการ</p>
-                                <p>001908153256</p>
-                            </div>
-                        </div>
-                        <div class="detail float-right">
-                            <div class="date-detail">
-                                <p class="small">วันที่และเวลา</p>
-                                <p>28 ต.ค. 62 <span>14.05 น.</span></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -70,6 +58,7 @@
             <div class="content cart">
                 <div class="container">
                     <div class="btn-scan"><a href="code-scan.html">สแกนสินค้า</a></div>
+                    <p class="list-prod-no">เลขที่การทำรายการ <span>001908153256</span></p>
                     <!-- NO LIST PRODUCT -->
                     <!-- <div class="no-list text-center">
                         <h5>ยังไม่มีสินค้าในรถเข็น</h5>
@@ -81,23 +70,18 @@
                         <h5>สินค้าในรถเข็น</h5>
                         <div class="list-detail">
                             <table>
-                                <thead>
-                                    <tr>
-                                        <th><p>ชื่อสินค้า</p></th>
-                                        <th><p>ราคา</p></th>
-                                    </tr>
-                                </thead>
                                 <tbody>
                                     <tr>
                                         <td class="prod-name">
-                                            <p>คอลลีน ดินสอสีไม้ 12 สี รุ่น 775</p>
-                                            <p class="small">รหัสสินค้า: 8851316009056</p>
+                                            <p>มรกตน้ำมันปาล์ม1ลิตร</p>
+                                            <p class="small">รหัสสินค้า: 8850154000041 (฿29/PCS)</p>
                                         </td>
-                                        <td class="prod-price">
-                                            <p><span>฿</span>126.00</p>
-                                        </td>
+                                        <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
                                     </tr>
                                     <tr>
+                                        <td class="prod-price">
+                                            <p><span>฿</span>58.00</p>
+                                        </td>
                                         <td class="prod-amount">
                                             <div class="input-group">
                                                 <span class="input-group-btn">
@@ -105,7 +89,7 @@
                                                         <img src="img/ico-minus-click.svg">
                                                     </button>
                                                 </span>
-                                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="99">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
                                                         <img src="img/ico-plus-click.svg">
@@ -113,94 +97,57 @@
                                                 </span>
                                             </div>
                                         </td>
-                                        <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
                                         <td class="prod-name">
-                                            <p>ตราหมี นมผงปรุงแต่ง แอดวานซ์โพรเท็กช์ชันแอลโพรเท็กซ์ทัส บิฟิดัสบีแอล...</p>
-                                            <p class="small">รหัสสินค้า: 8850124095213</p>
-                                        </td>
-                                        <td class="prod-price">
-                                            <p><span>฿</span>620.00</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="prod-amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                        <img src="img/ico-minus-click.svg">
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                                                        <img src="img/ico-plus-click.svg">
-                                                    </button>
-                                                </span>
-                                            </div>
+                                            <p>ฝรั่งแป้นสีทอง</p>
+                                            <p class="small">รหัสสินค้า: 218624005400009182 (฿59/kg)</p>
                                         </td>
                                         <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="prod-price">
+                                            <p><span>฿</span>54.00</p>
+                                        </td>
+                                        <td class="prod-amount">
+                                            <p>0.918 kg</p>
+                                        </td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
                                         <td class="prod-name">
-                                            <p>เบสิโค ชุดเครื่องครัว 8 ชิ้น สีโรสโกลด์</p>
-                                            <p class="small">รหัสสินค้า: 8859038110845</p>
-                                        </td>
-                                        <td class="prod-price">
-                                            <p><span>฿</span>1,599.00</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="prod-amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                        <img src="img/ico-minus-click.svg">
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                                                        <img src="img/ico-plus-click.svg">
-                                                    </button>
-                                                </span>
-                                            </div>
+                                            <p>MOLPOINTS 5000</p>
+                                            <p class="small">รหัสสินค้า: 102000004625979001000004750002 (฿4750/PCS)</p>
                                         </td>
                                         <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="prod-price">
+                                            <p><span>฿</span>4,750.00</p>
+                                        </td>
+                                        <td class="prod-amount">
+                                            <p>1 PCS</p>
+                                        </td>
                                     </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
                                         <td class="prod-name">
-                                            <p>ข้าวมาบุญครอง ข้าวหอมปทุม เกรด 100% คัดพิเศษ 5 กิโลกรัม</p>
-                                            <p class="small">รหัสสินค้า: 8859038110845</p>
-                                        </td>
-                                        <td class="prod-price">
-                                            <p><span>฿</span>169.00</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="prod-amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                        <img src="img/ico-minus-click.svg">
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                                                        <img src="img/ico-plus-click.svg">
-                                                    </button>
-                                                </span>
-                                            </div>
+                                            <p>MOLPOINTS 5000</p>
+                                            <p class="small">รหัสสินค้า: 102000004625979001000004750002 (฿4750/PCS)</p>
                                         </td>
                                         <td class="prod-remove"><button type="button" data-toggle="modal" data-target="#modalRemove"><img src="img/ico-remove.svg"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="prod-price">
+                                            <p><span>฿</span>4,750.00</p>
+                                        </td>
+                                        <td class="prod-amount">
+                                            <p>1 PCS</p>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -233,7 +180,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>ท่านต้องการที่จะลบสินค้านี้ออกจากรถเข็นใช่หรือไม่</p>
+            <p>ท่านต้องการที่จะลบสินค้านี้ออกจากรถเข็น<br>ใช่หรือไม่</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary remove">ลบ</button>
@@ -253,11 +200,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>กรุณาเปิดใช้บริการระบุตำแหน่งที่ตั้งเพื่อให้ Scan and Pay สามารถเข้าถึงตำแหน่งช้อปปิ้งปัจจุบันของท่านได้</p>
+            <p>กรุณาเปิดใช้บริการระบุตำแหน่งที่ตั้งเพื่อให้ Scan & Pay สามารถเข้าถึงตำแหน่งช้อปปิ้งปัจจุบันของท่านได้</p>
           </div>
           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">ไม่เปิดใช้งาน</button>
             <button type="button" class="btn btn-primary btn-green">เปิดใช้งาน</button>
-            <button type="button" class="btn btn-secondary btn-link" data-dismiss="modal">ไม่เปิดใช้งาน</button>
           </div>
         </div>
       </div>
@@ -292,11 +239,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>กรุณาอนุญาตการเข้าถึงกล้อง เพื่อให้คุณสามารถสแกนโค้ดสินค้าระหว่างใช้งาน Scan and Pay ได้</p>
+            <p>กรุณาอนุญาตการเข้าถึงกล้อง เพื่อให้คุณสามารถสแกนโค้ดสินค้าระหว่างใช้งาน Scan & Pay ได้</p>
           </div>
           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">ปฏิเสธ</button>
             <button type="button" class="btn btn-primary btn-green">อนุญาต</button>
-            <button type="button" class="btn btn-secondary btn-link" data-dismiss="modal">ปฏิเสธ</button>
           </div>
         </div>
       </div>
@@ -305,21 +252,20 @@
 
     <script type="text/javascript">
         // Menu
-        var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-            showRightPush = document.getElementById( 'showRightPush' ),
-            body = document.body;
+        var overlay = false
 
-        showRightPush.onclick = function() {
-            classie.toggle( this, 'active' );
-            classie.toggle( body, 'cbp-spmenu-push-toleft' );
-            classie.toggle( menuRight, 'cbp-spmenu-open' );
-            disableOther( 'showRightPush' );
-        };
-
-        function disableOther( button ) {
-            if( button !== 'showRightPush' ) {
-                classie.toggle( showRightPush, 'disabled' );
-            }
+        function overlayToggle() {
+          if (!overlay) {
+            $(".cbp-spmenu-push").addClass("cbp-spmenu-push-toleft")
+            $(".cbp-spmenu").addClass("cbp-spmenu-open")
+            $(".bg-overlay").css("display", "block")
+            overlay = true
+          } else {
+            $(".cbp-spmenu-push").removeClass("cbp-spmenu-push-toleft")
+            $(".cbp-spmenu").removeClass("cbp-spmenu-open")
+            $(".bg-overlay").css("display", "none")
+            overlay = false
+          }
         }
     </script>
   </body>

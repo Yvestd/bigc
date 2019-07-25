@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ico-logout" transform="translate(-341 -321)">
+    <rect id="Rectangle_23" data-name="Rectangle 23" width="24" height="24" transform="translate(341 321)" fill="none"/>
+    <g id="Group_493" data-name="Group 493" transform="translate(-1.5 0.1)">
+      <path id="Path_571" data-name="Path 571" stroke="#a2a2a2" d="M16.806,5.359V2.92h-12V19.267h12v-2.41" fill="none" transform="translate(340.194 321.98)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" opacity="0.8"/>
+      <g id="Group_492" data-name="Group 492" transform="translate(-1 0.218)">
+        <g id="Group_26" data-name="Group 26" transform="translate(362.298 329.604)">
+          <path id="Path_17" data-name="Path 17" d="M869.288,495.6l2.82,2.895-2.82,2.8" transform="translate(-868.74 -495.144)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <path id="Path_572" data-name="Path 572" d="M16,12h7.87" transform="translate(340 321)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
